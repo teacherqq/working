@@ -27,6 +27,15 @@
     .formula span,.card-body,.card-body li,.theme-card p,.theme-card small,.frame p,.example-card p,.example-card small,.oral,.oral em,.slide-intro p{font-size:20px;line-height:1.75}.formula span{line-height:1.55}.tag{font-size:16px}
     .formula div{position:relative;padding-left:76px}.formula div:before{position:absolute;left:20px;top:22px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font:700 23px/1 Arial}.formula div:nth-child(1):before{content:"⌕"}.formula div:nth-child(2):before{content:"✎"}.formula div:nth-child(3):before{content:"↗"}.formula div:nth-child(4):before{content:"★"}.section-head h2:before{content:"";display:inline-block;width:8px;height:24px;margin-right:10px;border-radius:8px;background:var(--blue);vertical-align:-2px}.theme-card{position:relative;border-left:5px solid var(--blue)}.theme-card:nth-child(2){border-left-color:#4d9b58}.theme-card:nth-child(3){border-left-color:#d58a32}.theme-card:nth-child(4){border-left-color:#7d63b5}.theme-card:nth-child(5){border-left-color:#219c9c}.theme-card:after{content:"";position:absolute;right:18px;top:18px;width:34px;height:34px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font:700 16px Arial}.theme-card:nth-child(1):after{content:"1"}.theme-card:nth-child(2):after{content:"2"}.theme-card:nth-child(3):after{content:"3"}.theme-card:nth-child(4):after{content:"4"}.theme-card:nth-child(5):after{content:"5"}.analysis-map{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 20px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}.analysis-step{position:relative;padding:14px 12px 12px 48px;border-radius:10px;background:#f7fafc;color:var(--ink);font-weight:800}.analysis-step:before{position:absolute;left:12px;top:13px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font:700 14px Arial}.analysis-step:nth-child(1):before{content:"1"}.analysis-step:nth-child(2):before{content:"2"}.analysis-step:nth-child(3):before{content:"3"}.analysis-step:nth-child(4):before{content:"4"}.analysis-step:not(:last-child):after{content:"→";position:absolute;right:-17px;top:12px;color:var(--blue);font:700 20px Arial;z-index:1}.analysis-step small{display:block;margin-top:2px;color:var(--muted);font:400 14px Arial}.evidence{padding:2px 6px;border-radius:5px;background:#e8f2f8;color:var(--blue);font-weight:800}.technique-mark{padding:2px 6px;border-radius:5px;background:#f4ebdf;color:#96642b;font-weight:800}.meaning-mark{padding:2px 6px;border-radius:5px;background:#eaf5ed;color:#387648;font-weight:800}
     @media(max-width:600px){.analysis-map{grid-template-columns:1fr 1fr}.analysis-step:not(:last-child):after{display:none}.formula div{padding-left:76px}}
+    /* ---- 頁腳署名 ---- */
+    .wfooter{margin-top:64px;border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;gap:16px 40px;align-items:flex-start;justify-content:space-between}
+    .wfooter .wf-block{display:flex;flex-direction:column;gap:3px}
+    .wfooter .wf-label{color:var(--muted);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+    .wfooter .wf-name{color:var(--ink);font-size:20px;letter-spacing:.04em}
+    .wfooter .wf-mail{color:var(--blue);font-size:15px;font-weight:700;text-decoration:none;border-bottom:1px solid #cfe0ec;padding-bottom:2px;transition:color .2s,border-color .2s}
+    .wfooter .wf-mail:hover{color:var(--gold);border-bottom-color:var(--gold)}
+    .wfooter .wf-note{color:var(--muted);font-size:12.5px;line-height:1.9;text-align:right;max-width:330px}
+    @media(max-width:760px){.wfooter{flex-direction:column;gap:20px}.wfooter .wf-note{text-align:left;max-width:none}}
   </style>
 </head>
 <body>
@@ -124,6 +133,17 @@
       <p class="slide-caption" id="slideCaption">BHL个人口试流程总结构</p>
     </div>
   </section>
+  <footer class="wfooter">
+    <div class="wf-block">
+      <span class="wf-label ui">網站設計 · Website Design</span>
+      <span class="wf-name">Ms Qian</span>
+    </div>
+    <div class="wf-block">
+      <span class="wf-label ui">聯繫方式 · Contact</span>
+      <a class="wf-mail ui" href="mailto:aiteacherq@gmail.com">aiteacherq@gmail.com</a>
+    </div>
+    <div class="wf-note ui">如有文學分析或口試準備上的疑問，歡迎來信討論。<br>Questions about literary analysis or the individual oral? Feel free to email.</div>
+  </footer>
 </main>
 <script>
   const search=document.querySelector('#search'), filter=document.querySelector('#filter'), count=document.querySelector('#count');
