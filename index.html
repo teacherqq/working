@@ -125,17 +125,9 @@
 ========================================================= */
 const CATS = ['IB 文學 · BHL', '課堂教學', '評估與試卷', '行政與文件'];
 
-const DOCS = [
-  {
-    slug: 'bhl-literature',
-    cat:  'IB 文學 · BHL',
-    zh:   'BHL 文學分析與口試工作站',
-    en:   'BHL Literary Analysis & Individual Oral Hub',
-    desc: '文學分析基本思路、常用寫作手法與人物描寫術語、五大主題分析框架、常用分析句型，以及「3–4 分鐘完整分析」的範例拆解與口試注意事項。',
-    tags: ['文學分析', '個人口試', '術語工具箱', '分析句型', '五大主題'],
-    date: '2026-09'
-  }
-];
+/* BHL 文學分析與口試工作站已於 2026-09-22 移至教學工具集：
+   https://teacherqq.github.io/teaching/bhl-literature/ */
+const DOCS = [];
 
 /* =========================================================
    渲染
@@ -179,7 +171,7 @@ function render(list){
       </section>`;
   });
 
-  box.innerHTML = html || '<p class="empty">找不到符合的文檔，換個關鍵詞試試。</p>';
+  box.innerHTML = html || `<p class="empty">${DOCS.length ? '找不到符合的文檔，換個關鍵詞試試。' : '這個文檔集目前還沒有收錄內容。'}</p>`;
 
   document.getElementById('count').textContent =
     list.length ? `共 ${list.length} 份文檔 · ${cats.filter(c => list.some(d => d.cat === c)).length} 個分類` : '';
